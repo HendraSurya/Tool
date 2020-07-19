@@ -1,0 +1,152 @@
+<style type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  background: white;
+  background: radial-gradient(circle, white 10%, #eee);
+}
+
+body {
+  font: 16px arial;
+}
+
+
+#kalkulator {
+  width: 325px;
+  height: 300px; /* nanti auto */
+  margin: 20px auto;
+  padding: 20px 20px 10px;
+  background: linear-gradient(#baffc9, #a0ffb5);
+  box-shadow: 0 4px 0 #64bf77, 0 10px 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+
+.atas {
+  overflow: hidden;
+  padding-right: 6px;
+}
+.btn {
+  width: 66px;
+  height: 36px;
+  float: left;
+  background: #ffb3ba;
+  color: white;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 35px;
+  box-shadow: 0 4px 0 #df8c94;
+  margin: 0 5px 11px 0;
+  position: relative;
+  top: 0;
+  
+  user-select: none;
+  cursor: pointer;
+  
+  transition: 0.2s ease;
+}
+
+.layar {
+  width: 208px;
+  height: 40px;
+  background: rgba(0,0,0,0.2);
+  float: right;
+  text-align: right;
+  line-height: 40px;
+  padding: 0 10px;
+  box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  font-size: 1.1em;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+
+.bawah {
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.btn.numb {
+  background: white;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+  color: #999;
+}
+
+.btn.operator {
+  background: #ffdfba;
+  box-shadow: 0 4px 0 #dea768;
+  color: #dea768;
+  font-size: 1.4em;
+}
+
+.btn.hitung {
+  background: #ffffba;
+  box-shadow: 0 4px 0 #bebe47;
+  color: #bebe47;
+  font-size: 1.4em;
+}
+
+
+.btn:hover {
+  filter: brightness(0.95);
+}
+
+.btn:active {
+  box-shadow: 0 0 0;
+  top: 4px;
+}
+</style>
+<div id="kalkulator">
+  <div class="atas">
+    <div class="btn">C</div>
+    <div class="layar"></div>
+  </div>
+  
+  <div class="bawah">
+    <span class="btn numb">7</span>
+    <span class="btn numb">8</span>
+    <span class="btn numb">9</span>
+    <span class="btn operator">/</span>
+    
+    <span class="btn numb">4</span>
+    <span class="btn numb">5</span>
+    <span class="btn numb">6</span>
+    <span class="btn operator">*</span>
+    
+    <span class="btn numb">1</span>
+    <span class="btn numb">2</span>
+    <span class="btn numb">3</span>
+    <span class="btn operator">-</span>
+    
+    <span class="btn numb">0</span>
+    <span class="btn numb">.</span>
+    <span class="btn hitung">=</span>
+    <span class="btn operator">+</span>
+  </div>
+</div>
+<script type="text/javascript">
+const numb = document.querySelectorAll('.btn');
+
+for( a of numb ) {
+  a.onclick = function() {
+    
+    const layar = document.querySelector('.layar');
+    const nilaiDiLayar = layar.innerHTML;
+    const nilaibtn = this.innerHTML;
+    
+    if( nilaibtn == 'C' ) {
+      layar.innerHTML = '';
+    } else if( nilaibtn == '=' ) {
+      layar.innerHTML = eval( nilaiDiLayar );
+    } else {
+      layar.innerHTML += nilaibtn;
+    }
+</script>
