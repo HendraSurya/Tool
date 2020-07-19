@@ -1,10 +1,12 @@
 <style type="text/css">
+/* reset dasar */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* global style */
 html {
   height: 100%;
   background: white;
@@ -16,6 +18,7 @@ body {
 }
 
 
+/* container kalkulator */
 #kalkulator {
   width: 325px;
   height: 300px; /* nanti auto */
@@ -26,7 +29,7 @@ body {
   border-radius: 5px;
 }
 
-
+/* bagian atas (btn C dan layar) */
 .atas {
   overflow: hidden;
   padding-right: 6px;
@@ -69,6 +72,7 @@ body {
 }
 
 
+/* bagian bawah */
 .bawah {
   overflow: hidden;
   margin-top: 15px;
@@ -93,6 +97,7 @@ body {
   color: #bebe47;
   font-size: 1.4em;
 }
+
 
 
 .btn:hover {
@@ -149,4 +154,7 @@ for( a of numb ) {
     } else {
       layar.innerHTML += nilaibtn;
     }
+          
+  }
+}
 </script>
