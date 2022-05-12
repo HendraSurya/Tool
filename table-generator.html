@@ -5,200 +5,41 @@
 <title>Table Generator</title>
 <meta content='width=device-width, initial-scale=1' name='viewport'>
 <style>
-.btn,
-a.btn-apple,
-a.btn-apple:hover,
-a.btn-download,
-a.btn-download:hover,
-a.btn-google,
-a.btn-google:hover,
-a.btn-play,
-a.btn-play:hover {
-    color: #fff;
-}
-.btn-apple:before,
-.btn-google:before,
-.btn-play:before {
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 30px;
-}
-.btn,
-kbd {
-    display: inline-block;
-}
-.btn--blue {
-    background-color: #3498db;
-}
-.btn--green {
-    background-color: #1abc9c;
-}
-.btn--red {
-    background-color: #e65d4f;
-}
-.btn--lg {
-    font-size: 1.5em;
-}
-.btn--df {
-    font-size: 1.25em;
-}
-.btn--md {
-    font-size: 1em;
-}
-.btn--sm {
-    font-size: 0.75em;
-}
 @font-face {
     font-family: "Product Sans";
     src: url(https://cdn.jsdelivr.net/gh/KompiAjaib/font@master/product-sans-regular.ttf) format("ttf");
     font-weight: 400;
     font-style: normal;
 }
-.btn {
-    border: none;
-    border-radius: 0.3em;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 -0.25em 0 rgba(0, 0, 0, 0.25), 0 0.25em 0.25em rgba(0, 0, 0, 0.05);
-    cursor: pointer;
-    font-family: Raleway, sans-serif, Arial;
-    font-weight: 300;
-    line-height: 1.5;
-    letter-spacing: 1px;
-    padding: 0.5em 1.5em 0.75em;
-    position: relative;
-    text-decoration: none;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.25);
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.btn-apple,
-.btn-download,
-.btn-google,
-.btn-play {
-    font-family: "Product Sans", Arial, sans-serif;
-    font-weight: 600;
-    color: #fff;
-}
-.btn:active {
-    outline: 0;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 0.25em 0.5em rgba(0, 0, 0, 0.05);
-    margin-top: 0.25em;
-    padding-bottom: 0.5em;
-}
-.btn-play {
-    background-color: #d32f2f;
-    border-color: #c62828;
-    padding: 10px 16px 10px 40px;
-    position: relative;
-}
-.btn-play:active,
-.btn-play:focus,
-.btn-play:hover {
-    color: #fff;
-    background-color: #c62828;
-    border-color: #b71c1c;
-}
-.btn-play:before {
-    content: "";
-    color: #fff;
-    background-image: url(https://1bp.blogspot.com/-DpJGZ47Olck/WSkXyTDP1kI/AAAAAAAArQQ/UwIxH4hYRIkbgZkN0_mUrkK12HveGFsXACLcB/s1600/play.png);
-    height: 40px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    margin-top: -20px;
-}
-.btn-download {
-    background-color: #337ab7;
-    border-color: #2e6da4;
-}
-.btn-download:focus {
-    color: #fff;
-    background-color: #286090;
-    border-color: #122b40;
-}
-.btn-download:active,
-.btn-download:hover {
-    color: #fff;
-    background-color: #286090;
-    border-color: #204d74;
-}
-.btn-apple,
-.btn-google {
-    background-color: #111;
-    border-color: #000;
-    position: relative;
-}
-.btn-google {
-    padding: 15px 16px 5px 40px;
-}
-.btn-apple {
-    padding: 15px 22px 5px 50px;
-}
-.btn-apple:active,
-.btn-apple:focus,
-.btn-apple:hover,
-.btn-google:active,
-.btn-google:focus,
-.btn-google:hover {
-    color: #fff;
-    background-color: #555;
-    border-color: #000;
-}
-.btn-apple:before,
-.btn-google:before {
-    height: 30px;
-    margin-top: -15px;
-    position: absolute;
-}
-.btn-google:before {
-    content: "";
-    background-image: url(https://4bp.blogspot.com/-52u3ep2jdm4/WSkIT1vbUxI/AAAAAAAArQA/iF1BeARv2To-2FGQU7V6UbNPivuv_lccACLcB/s30/nexus2cee_ic_launcher_play_store_new-1.png);
-    left: 6px;
-    top: 50%;
-}
-.btn-google:after {
-    content: "GET IT ON";
-    position: absolute;
-    top: 5px;
-    left: 40px;
-    font-size: 10px;
-    font-weight: 400;
-}
-.btn-apple:before {
-    content: "";
-    background-image: url(https://2bp.blogspot.com/-pfguXOXm3fg/WfbA_JMxnOI/AAAAAAAAtoA/wkc55zw6kZ4cG-S-9K2HVie6RxXRhuvdACLcBGAs/s30/apple.png);
-    left: 10px;
-    top: 50%;
-}
-.btn-apple:after {
-    content: "Download on the";
-    position: absolute;
-    top: 5px;
-    left: 50px;
-    font-size: 11px;
-    font-weight: 400;
-}
-kbd {
-    color: #333;
-    -moz-border-radius: 3px;
-    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
-    -webkit-border-radius: 3px;
-    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
-    background-color: #f7f7f7;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
-    line-height: 1.4;
-    margin: 0 0.1em;
-    padding: 0.1em 0.6em;
-    text-shadow: 0 1px 0 #fff;
-    vertical-align: 3px;
-}
+    table.tftable {
+  font-family: verdana,arial,sans-serif;
+  font-size:12px;
+  color:#333333;
+  width:100%;
+  border-width: 1px;
+  border-color: #729ea5;
+  border-collapse: collapse;
+  background-color:#d4e3e5;
+ }
+ table.tftable th {
+  font-size:12px;
+  background-color:#acc8cc;
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #729ea5;
+  text-align:left;
+ }
+ table.tftable tr {
+  background-color:#d4e3e5;
+ }
+ table.tftable td {
+  font-size:12px;
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #729ea5;
+ }
 </style>
 </head>
 <body>
@@ -240,37 +81,6 @@ kbd {
 <h3 style="padding-bottom:0px;">Tabel HTML Anda</h3>
 <p style="padding-top:0px;">Ini kira-kira tampilan Tabel HTML yang akan terlihat di situs web atau blog Anda.</p>
 <div id="newTable">
- <style type="text/css">
- table.tftable {
-  font-family: verdana,arial,sans-serif;
-  font-size:12px;
-  color:#333333;
-  width:100%;
-  border-width: 1px;
-  border-color: #729ea5;
-  border-collapse: collapse;
-  background-color:#d4e3e5;
- }
- table.tftable th {
-  font-size:12px;
-  background-color:#acc8cc;
-  border-width: 1px;
-  padding: 8px;
-  border-style: solid;
-  border-color: #729ea5;
-  text-align:left;
- }
- table.tftable tr {
-  background-color:#d4e3e5;
- }
- table.tftable td {
-  font-size:12px;
-  border-width: 1px;
-  padding: 8px;
-  border-style: solid;
-  border-color: #729ea5;
- }
-</style>
 <table id="tfhover" class="tftable" border="1"><tbody><tr><th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th><th>Header 5</th></tr><tr><td>Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td><td>Row:1 Cell:4</td><td>Row:1 Cell:5</td></tr><tr><td>Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td><td>Row:2 Cell:4</td><td>Row:2 Cell:5</td></tr><tr><td>Row:3 Cell:1</td><td>Row:3 Cell:2</td><td>Row:3 Cell:3</td><td>Row:3 Cell:4</td><td>Row:3 Cell:5</td></tr><tr><td>Row:4 Cell:1</td><td>Row:4 Cell:2</td><td>Row:4 Cell:3</td><td>Row:4 Cell:4</td><td>Row:4 Cell:5</td></tr><tr><td>Row:5 Cell:1</td><td>Row:5 Cell:2</td><td>Row:5 Cell:3</td><td>Row:5 Cell:4</td><td>Row:5 Cell:5</td></tr><tr><td>Row:6 Cell:1</td><td>Row:6 Cell:2</td><td>Row:6 Cell:3</td><td>Row:6 Cell:4</td><td>Row:6 Cell:5</td></tr></tbody></table>
 </div>
 <p style="padding-top:20px;">Pengaturan khusus Anda untuk jumlah baris dan kolom tabel tidak tampil dalam pratinjau tabel ini.</p>
